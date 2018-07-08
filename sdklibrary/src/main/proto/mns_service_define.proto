@@ -1,0 +1,213 @@
+/******************************************************************************
+ * 文件名称： mns_service_define.proto
+ * 文件描述：
+ * 创建日期： 2015-01-19
+ * 作    者：
+ * 函数列表：
+ * Copyright 2010 - 2015 XIAOMI Inc. All Rights Reserved
+ * 修改历史：
+ *            <作者>        <修改日期>          <修改描述>
+ ******************************************************************************/
+
+
+/*****************    pb规范   *******************************************
+1.用pascal规则(每个单词首字段都用大写)命名message消息类型
+2.用camel规则(第一个字母小写，余下单词首字母大写)命名字段名
+3.全大写命名extend消息类型的字段名
+4.string统一采用utf8编码
+5.除unixtime、32位网络IP用fixed32外，其余无符号都用uint32，有符号用sint32
+6.result用无符号:0代表成功，错误码全局分段管理,高24位用于分段，低8位为具体错误
+*************************************************************************/
+
+package com.mi.milink.sdk.proto;
+
+option java_package = "com.mi.milink.sdk.proto";
+option java_outer_classname = "SystemPacketProto";
+
+/********* 登录协议 ServiceCmd=milink.login *********/
+// 登录、换票 时请求包结构
+message MnsCmdLoginReq
+{
+    optional uint32 flag=1;//辅助标记位
+    optional string sUID=2;//设备ID
+}
+
+// 登录、换票 时返回结构体
+message MnsCmdLoginRsp
+{
+    optional bytes  GTKEY_B2=1;//用于加密透传数据包
+    optional bytes  B2=2;//B2通讯票据
+    optional string sUID=3;//设备ID
+}
+
+/******** 心跳协议 ServiceCmd=milink.heartbeat **********/
+message SdkConnMgrInfo
+{
+	optional int32 ip_principle=1;//1:apn的IP表获得，2：重定向获得，3:最近使用IP，4：DNS获得，5:备用IP 6: cdn动态加速备用
+	optional int32 apn_type=2;//客户端apn类型
+	optional bool  is_bgd=3;//客户端正在后台
+}
+
+
+ //心跳场景  sense
+ //1:app 启动后握手成功后发一次心跳包
+ //2:重连后握手成功后发一次心跳包
+ //3:每3分钟发一次心跳包
+ //4:省电模式下每20分钟发一次心跳包
+ //5:从省电模式回到前台，发一次心跳包
+
+message MnsCmdHeartBeat
+{
+    optional uint32 ptime=1;//与push对应的ptime
+    optional SdkConnMgrInfo mgr_info=2;
+    optional string sUID=3;//设备ID
+    optional bool is_fake_hb=4;//是否假心跳 1假心跳 0真心跳 
+    optional uint64 timeStamp=5;//本地配置的水位
+    optional bytes  devicetoken=6;//仅IOS需要上报
+}
+ 
+message MnsCmdHeartBeatRsp
+{
+    optional uint64 timeStamp=1;//最新配置的水位
+    optional MiLinkConfig config=2;//最新的配置
+    optional float  engineratio=3;//引擎配置比例,vidyo为下发因子
+    optional string jsonconfig=4;//返回json格式的配置
+}
+
+
+message MiLinkConfig
+{
+    optional uint64 heartBeatInterval=1;//心跳的时间间隔
+    optional uint32 b2TokenExpireTime=2;//b2token过期时长（秒）
+}
+
+/******** 注销协议 ServeceCmd=mns.loginoff ********/
+message MnsCmdLoginOff
+{
+    optional string sUID=1;//设备ID
+}
+
+/********* PUSH状态上报协议 ServiceCmd=mns.push.register *********/
+// 每次登录后，上报当前设备的Push状态，Iphone需要把devicetoken带上来
+message MnsCmdPushRegisterReq
+{
+	optional bytes  devicetoken=1;//仅IOS需要上报
+	optional bool   onoff=2;//开关，是否接收push
+	optional string sUID=3;//设备ID
+	optional bool  passportlogin=4; //此次请求是否输passport
+}
+
+// 回应，SDK需要把UID保存起来
+message MnsCmdPushRegisterRsp
+{
+    optional string sUID=1;//设备ID
+}
+
+// accinfo
+message MnsAccInfo
+{
+    required uint64 AccId = 1;//客户端链接唯一标识
+    required uint32 AccIp = 2;//接入的accip
+    required uint32 AccPort = 3;//接入的acc端口
+    optional  int32 AccFlag = 4; // 透传acc中的flag标志位, 0x2 -- akamai
+}
+
+
+/******** 获取配置 ServiceCmd=milink.getconfig **********/
+message MiLinkGetConfigReq
+{
+    optional uint64 timeStamp = 1;//本地配置的水位
+}
+
+message MiLinkGetConfigRsp
+{
+	optional uint64 timeStamp = 1;//配置的水位
+        optional MiLinkConfig config = 2;//最新的配置
+	optional string jsonConfig = 3;//json格式的配置
+}
+
+/********** 握手协议 ServiceCmd=milink.handshake ********/
+message MnsCmdHandShakeReq
+{
+    required int32 type=1;//类型，1为需要IP重定向，0为不需要重定向
+    optional SdkConnMgrInfo mgr_info=2;
+}
+
+message MnsCmdHandShakeRsp
+{
+    required int32 type=1;//同上
+    repeated MnsIpInfo redirect=2;//需要跳转的ip
+    optional int32 uprinciple=3;//建议sdk使用的连接方式
+    optional string clientinfo=4; //返回客户端的IP以及apnType，格式：IP#type，IP是点分字符串格式，type是字符串
+    optional int32 cross_opr=5[default=0]; // 0:不跨; 1:跨运营商
+}
+
+// IP信息结构体
+message MnsIpInfo
+{
+    optional uint32 ip=1;
+    optional uint32 port=2;
+    optional int32 apn=3;//接入点定义 //0 - unknow; 1 - cmcc; 2 - unicom; 3 - cmct; 4 - wifi;
+    optional string remark=4;//备注使用,第一元素，表示保底IP列表，用#分隔
+}
+
+// serviceCmd = milink.fastlogin  ,使用B2token加密时候serviceCmd = milink.registerbind
+// 换票时登陆的请求包结构
+message MnsCmdFastloginReq
+{
+    optional string sUID=1;//设备ID
+    optional bytes  devicetoken=2;//仅IOS需要上报
+    optional bool   onoff=3;//开关，是否接收push
+    optional bytes  extra=4; //客户端自定义数据
+    optional bool  passportlogin=5; //此次请求是否输passport
+}
+
+// 换票时登陆的返回包结构
+message MnsCmdFastloginRsp
+{
+    optional bytes  GTKEY_B2=1;//用于加密透传数据包
+    optional bytes  B2=2;//B2通讯票据
+    optional string sUID=3;//设备ID
+}
+
+/********** 匿名登陆 ServiceCmd=milink.anonymous enc=7********/
+message MnsCmdAnonymousReq
+{
+required string privacyKey=1;//sdk随机生成私密key,下行加密使用
+required string deviceinfo=2;//设备信息-用于生成wid
+optional string sUID=3;//设备ID
+optional bytes  devicetoken=4;//仅IOS需要上报
+optional bool   onoff=5;//开关，是否接收push
+}
+
+message MnsCmdAnonymousRsp
+{
+required uint64 wid =1;//匿名登陆 ID
+required bytes B2 =2;
+required bytes GTKEY_B2 =3;
+optional string sUID=4;//设备ID
+}
+/********** 通道登陆 ServiceCmd=milink.channel enc=9********/
+message MnsCmdChannelReq
+{	
+	required string privacyKey=1;//sdk随机生成私密key,下行加密使用
+	required string deviceinfo=2;//设备信息-用于生成wid
+}
+//公钥未过期时（mnscode!=129），用MnsCmdChannelRsp解析Downstream中的业务PB
+message MnsCmdChannelRsp
+{
+	required uint64 wid	=1;//匿名登陆 ID
+	required bytes B2 =2;
+	required bytes GTKEY_B2=3;
+}
+//当公钥过期时（mnscode==129），用MnsCmdChannelNewPubKeyRsp解析downstream中的业务PB
+message PublicKeyInfo
+{
+	optional uint32 keyId = 1; //新公钥序号
+	optional string signature = 2; //新公钥签名
+	optional bytes publicKey = 3; //新公钥
+}
+message MnsCmdChannelNewPubKeyRsp
+{
+    repeated PublicKeyInfo pubInfo = 1;
+}

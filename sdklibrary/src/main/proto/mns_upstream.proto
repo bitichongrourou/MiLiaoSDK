@@ -1,0 +1,81 @@
+/******************************************************************************
+ * 文件名称： mns_upstream.proto
+ * 文件描述：
+ * 创建日期： 2015-01-14
+ * 作    者：
+ * 函数列表：
+ * Copyright 2010 - 2015 XIAOMI Inc. All Rights Reserved
+ * 修改历史：
+ *            <作者>        <修改日期>          <修改描述>
+ ******************************************************************************/
+
+
+/*****************    pb规范   *******************************************
+1.用pascal规则(每个单词首字段都用大写)命名message消息类型
+2.用camel规则(第一个字母小写，余下单词首字母大写)命名字段名
+3.全大写命名extend消息类型的字段名
+4.string统一采用utf8编码
+5.除unixtime、32位网络IP用fixed32外，其余无符号都用uint32，有符号用sint32
+6.result用无符号:0代表成功，错误码全局分段管理,高24位用于分段，低8位为具体错误
+*************************************************************************/
+
+package com.mi.milink.sdk.proto;
+
+option java_package = "com.mi.milink.sdk.proto";
+option java_outer_classname = "UpstreamPacketProto";
+
+//TOKEN类型
+enum TokenType {
+	MNS_TOKEN_TYPE_NULL = 0;  //无token，后续根据校验方式再增加
+}
+
+message UpstreamPacket{
+	optional uint32 seq=1;    //序列号
+	optional uint32 appId=2;  //业务ID
+	optional uint64 miUin=3;  //小米用户ID
+	optional string ua=4;
+	optional string serviceCmd=5;
+
+	optional bytes  deviceInfo=6;      //设备信息 imei/os/机型/分辨率，自定义结构
+	optional TokenInfo token=7;     //用户票据
+	optional ClientIpInfo ipInfo=8; //客户端IP信息
+
+	optional bytes  busiBuff=9;  //业务数据包
+	optional bytes  extra=10;     //mns附加信息,自定义
+	optional uint32 flag=11;
+	optional uint32 sessionId=12;
+
+	optional RetryInfo retryInfo=13;        //重试控制信息
+	optional BusiControl busiControl=14; //BusiBuff的加压控制
+	optional string miUid=15;               //string 类型的小米用户帐号
+}
+
+message TokenInfo{
+    optional uint32 type=1;       //token类型 类型见ENUM
+	optional bytes  key=2;         //票
+	repeated ExtKeyInfo extKey=3; //扩展key
+}
+
+message ExtKeyInfo{
+	optional uint32 key=1;
+	optional bytes  val=2;
+}
+
+message ClientIpInfo{
+	optional uint32 ipType=1;     //1表示IPv4, 2表示IPv6
+	optional uint32 clientPort=2; //客户端端口
+	optional uint32 clientIpV4=3; //IPV4
+	optional bytes  clientIpV6=4; //IPV6
+}
+
+message RetryInfo{
+	optional uint32 flag=1;      //0表示不支持，1表示支持
+	optional uint32 retryCnt=2;  //重试次数
+	optional uint64 pkgId=3;     //包唯一性标志
+}
+
+message BusiControl{
+	optional uint32 compFlag=1; //不加压（默认无此key时也不加压），0：不压缩；1：zip方式加压
+	optional uint64 lenBeforeComp=2;       //加压前的busiBuff长度	
+	optional bool   isSupportComp = 3; 
+}

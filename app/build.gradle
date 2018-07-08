@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "demo.csm.com.milinksdkcoreas"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
+
+//task clearLibsDir(type: Delete) {
+//    delete 'build/libs'
+//}
+//
+//task makeJar(type: Jar, dependsOn: clearLibsDir) {
+//    // 指定生成的 jar 包名称
+//    baseName 'CloudService-V1.0.2'
+//    // 制定需要打包的 class 文件目录
+//    from('build/intermediates/classes/paid/release/com/io/bearzpy/cloudsdk/')
+//    // 制定生成 jar 包的目录结构
+//    into('com/io/bearzpy/cloudsdk/')
+//    // 去掉 class 文件目录中不需要打包的目录和文件
+//    // exclude('main/', 'BuildConfig.class', 'R.class')
+//    // 去掉 R$ 开头的文件，去除资源文件
+//    // exclude{ it.name.startsWith('R$');}
+//}
+
+task Myjar(type: Jar, dependsOn: ['build']) {
+    archiveName = 'milinksdk-3.2.0.jar'
+    from('build/intermediates/classes/release')
+    destinationDir = file('build/libs')
+//    exclude('com/xiaomi/gamecenter/wxpay/BuildConfig.class')
+//    exclude('com/xiaomi/gamecenter/wxpay/BuildConfig\$*.class')
+    exclude('**/R.class')
+    exclude('**/R\$*.class')
+    include('com/mi/milink/sdk/**/*.class')
+}

@@ -1,0 +1,57 @@
+/******************************************************************************
+ * 文件名称： mns_push.proto
+ * 文件描述：
+ * 创建日期： 2015-01-14
+ * 作    者：
+ * 函数列表：
+ * Copyright 2010 - 2015 XIAOMI Inc. All Rights Reserved
+ * 修改历史：
+ *            <作者>        <修改日期>          <修改描述>
+ ******************************************************************************/
+
+
+/*****************    pb规范   *******************************************
+1.用pascal规则(每个单词首字段都用大写)命名message消息类型
+2.用camel规则(第一个字母小写，余下单词首字母大写)命名字段名
+3.全大写命名extend消息类型的字段名
+4.string统一采用utf8编码
+5.除unixtime、32位网络IP用fixed32外，其余无符号都用uint32，有符号用sint32
+6.result用无符号:0代表成功，错误码全局分段管理,高24位用于分段，低8位为具体错误
+*************************************************************************/
+
+package com.mi.milink.sdk.proto;
+
+option java_package = "com.mi.milink.sdk.proto";
+option java_outer_classname = "PushPacketProto";
+
+message SimplePushData{
+    required string tomiUid=1;
+    required uint32 appid=2;
+    optional string frommiUid=3;
+    optional string cmd=4;
+    optional bytes  pushdata=5;
+}
+
+//被kick 下线的文案
+message KickMessage{
+optional uint32 type=1;// type = 1 <多设备互踢>
+optional uint32 time = 2;//时间 秒
+optional string device =3; // 踢发起方设备android,ios,也可能没有
+ 
+}
+
+message MilinkLogReq
+{
+ optional   int32 time = 1;//时间范围，-1代表全量日志，0当天，1昨天，2前天
+ optional  string ip = 2;// 需要连接的IP
+ optional  uint32  urgentLevel =3;// 紧急程度。0一般，1不紧急，2重要
+ optional uint32 type= 4;//类型，0代表是log上传，1代表logLevel
+ optional PushLogLevel logLevel= 5;
+}
+
+/***  下行push logLevel****/
+message PushLogLevel{
+   optional uint32 loglevel=1;// 日志级别
+   optional uint32 timeLong = 2;//时长
+   
+}

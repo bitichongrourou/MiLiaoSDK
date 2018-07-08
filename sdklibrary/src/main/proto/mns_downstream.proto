@@ -1,0 +1,45 @@
+/******************************************************************************
+ * 文件名称： mns_upstream.proto
+ * 文件描述：
+ * 创建日期： 2015-01-14
+ * 作    者：
+ * 函数列表：
+ * Copyright 2010 - 2015 XIAOMI Inc. All Rights Reserved
+ * 修改历史：
+ *            <作者>        <修改日期>          <修改描述>
+ ******************************************************************************/
+
+
+/*****************    pb规范   *******************************************
+1.用pascal规则(每个单词首字段都用大写)命名message消息类型
+2.用camel规则(第一个字母小写，余下单词首字母大写)命名字段名
+3.全大写命名extend消息类型的字段名
+4.string统一采用utf8编码
+5.除unixtime、32位网络IP用fixed32外，其余无符号都用uint32，有符号用sint32
+6.result用无符号:0代表成功，错误码全局分段管理,高24位用于分段，低8位为具体错误
+*************************************************************************/
+
+package com.mi.milink.sdk.proto;
+
+import "proto/mns_upstream.proto";
+
+option java_package = "com.mi.milink.sdk.proto";
+option java_outer_classname = "DownstreamPacketProto";
+
+message DownstreamPacket{
+	optional uint32 seq=1;         //序列号
+	optional uint64 miUin=2;       //小米用户ID
+	optional sint32 mnsCode=3;     //mns内部返回码 业务不用设此值
+	optional sint32 busiCode=4;    //业务返回码 由业务传入。用于mns统计监控使用
+	optional string serviceCmd=5;  //命令字
+	optional bytes  busiBuff=6;    //业务数据包
+	optional bytes  extra=7;       //mns附加信息
+	optional string mnsErrMsg=8;   //错误信息
+	optional string miUid=9;       //string 类型的uin
+	optional BusiControl busiControl=10; //BusiBuff的加压控制
+}
+
+message ExtraInfo{
+	optional bool hasClientInfo =1;// true 代表acc 缓存了 client信息
+}
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="demo.csm.com.sdklibrary.ExampleUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-07-03T07:20:53" hostname="DESKTOP-2EMFO6P" time="0.0">
+  <properties/>
+  <testcase name="addition_isCorrect" classname="demo.csm.com.sdklibrary.ExampleUnitTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,1440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 3.1.2">
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by WifiManager.getConnectionInfo: android.permission.ACCESS_WIFI_STATE"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="   macAddress = wifi.getConnectionInfo().getMacAddress();"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\info\DeviceDash.java"
+            line="60"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by TelephonyManager.getDeviceId: android.permission.READ_PHONE_STATE"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="    device_id = mTelephonyMgr.getDeviceId();"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\info\DeviceDash.java"
+            line="80"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by TelephonyManager.getDeviceId: android.permission.READ_PHONE_STATE"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="    mDeviceId = mTelephonyMgr.getDeviceId();"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\info\DeviceDash.java"
+            line="175"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by WifiManager.getDhcpInfo: android.permission.ACCESS_WIFI_STATE"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="     DhcpInfo info = wifiManager.getDhcpInfo();"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\info\DnsDash.java"
+            line="39"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by Context.sendStickyBroadcast: android.permission.BROADCAST_STICKY"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="        getContext().sendStickyBroadcast(intent);"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\Global.java"
+            line="317"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by Context.sendStickyOrderedBroadcast: android.permission.BROADCAST_STICKY"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="        getContext().sendStickyOrderedBroadcast(intent, resultReceiver, scheduler, initialCode,"
+        errorLine2="        ^"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\Global.java"
+            line="323"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by Context.removeStickyBroadcast: android.permission.BROADCAST_STICKY"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="        getContext().removeStickyBroadcast(intent);"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\Global.java"
+            line="328"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by ConnectivityManager.getActiveNetworkInfo: android.permission.ACCESS_NETWORK_STATE"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="                info = manager.getActiveNetworkInfo();"
+        errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\info\NetworkDash.java"
+            line="436"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by ConnectivityManager.getActiveNetworkInfo: android.permission.ACCESS_NETWORK_STATE"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="                NetworkInfo networkInfo = connectivityMgr.getActiveNetworkInfo();"
+        errorLine2="                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\persistent\SessionManager.java"
+            line="1587"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by ConnectivityManager.getActiveNetworkInfo: android.permission.ACCESS_NETWORK_STATE"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="                    NetworkInfo networkInfo = connectivityMgr.getActiveNetworkInfo();"
+        errorLine2="                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\persistent\SessionManager.java"
+            line="1618"
+            column="47"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by ConnectivityManager.getActiveNetworkInfo: android.permission.ACCESS_NETWORK_STATE"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="    NetworkInfo networkInfo = connectivityMgr.getActiveNetworkInfo();"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\simplechannel\SessionManagerForSimpleChannel.java"
+            line="1272"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by ConnectivityManager.getActiveNetworkInfo: android.permission.ACCESS_NETWORK_STATE"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="     NetworkInfo networkInfo = connectivityMgr.getActiveNetworkInfo();"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\simplechannel\SessionManagerForSimpleChannel.java"
+            line="1306"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by WifiManager.getConnectionInfo: android.permission.ACCESS_WIFI_STATE"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="   wifiInfo = wifiManager.getConnectionInfo();"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\info\WifiDash.java"
+            line="36"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by WifiManager.getConnectionInfo: android.permission.ACCESS_WIFI_STATE"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="   wifiInfo = wifiManager.getConnectionInfo();"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\info\WifiDash.java"
+            line="78"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by WifiManager.getConnectionInfo: android.permission.ACCESS_WIFI_STATE"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="   wifiInfo = wifiManager.getConnectionInfo();"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\info\WifiDash.java"
+            line="101"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="        ed.commit();"
+        errorLine2="        ~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\account\IAccount.java"
+            line="89"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="  preferences.edit().putBoolean(key, checked).commit();"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\Native.java"
+            line="399"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        AccessPoint accessPoint = ACCESS_POINT_MAP.get(name.toLowerCase());"
+        errorLine2="                                                            ~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\info\AccessPoint.java"
+            line="84"
+            column="61"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        String UpperCase = temp.toUpperCase();"
+        errorLine2="                                ~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\common\BufferUtil.java"
+            line="12"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="  return String.format(&quot;ChannelAccount[No:%d]&quot;,mNo);"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\account\ChannelAccount.java"
+            line="59"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                String cmd = String.format(&quot;logcat -v time -f %s -t %d&quot;, filePath, 8000);"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\client\ipc\ClientLog.java"
+            line="232"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        TAG = String.format(&quot;[No:%d]%s&quot;, sessionNO, CLASSTAG);"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\connection\ConnectionImpl.java"
+            line="80"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="  String host = url.toLowerCase();"
+        errorLine2="                    ~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\dns\DnsMain.java"
+            line="197"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="  origUrl = origUrl.toLowerCase().startsWith(PROTOCOL_PREFIX) ? origUrl"
+        errorLine2="                    ~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\Http.java"
+            line="121"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="   finalUrl = finalUrl.toLowerCase().startsWith(PROTOCOL_PREFIX) ? finalUrl"
+        errorLine2="                       ~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\Http.java"
+            line="224"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="   finalUrl = finalUrl.toLowerCase().startsWith(PROTOCOL_PREFIX) ? finalUrl"
+        errorLine2="                       ~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\Http.java"
+            line="332"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            String log = String.format(&quot;loginMiLink,b2Token.length=%d,b2Security.length=%d&quot;,"
+        errorLine2="                         ^">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\account\IAccount.java"
+            line="204"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        String log = String.format("
+        errorLine2="                     ^">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\account\manager\MiAccountManager.java"
+            line="165"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        super(String.format(&quot;errCode:%d errMsg:%s&quot;, errCode, errMsg));"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\client\MiLinkException.java"
+            line="12"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        return String.format(&quot;%.2fMB&quot;, size / 1024.0);"
+        errorLine2="               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\service\MiLinkExceptionHandler.java"
+            line="119"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        TAG = String.format(&quot;[No:%d]%s&quot;, session.getSessionNO(), CLASSTAG);"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\persistent\MnsCodeCopeWaysHasListener.java"
+            line="19"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        TAG = String.format(&quot;[No:%d]%s&quot;, session.getSessionNO(), CLASSTAG);"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\persistent\MnsCodeCopeWaysNoListener.java"
+            line="18"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="  TAG = String.format(&quot;[No:%d]%s&quot;, session.getSessionNO(), CLASSTAG);"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\persistent\MnsCodeCopeWaysWithPush.java"
+            line="42"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        MiLinkLog.v(TAG, String.format("
+        errorLine2="                         ^">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\service\MnsServiceBinder.java"
+            line="365"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="  TAG = String.format(&quot;[No:%d]%s&quot;, sessionNO, CLASSTAG);"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\common\ReceiveBuffer.java"
+            line="47"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="  byte[] result = StreamUtil.toUpBytes(String.format(&quot;[No:%d]&quot;, mHandleSessionNO), data, isPing, encodeType,"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\common\Request.java"
+            line="115"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="  domain = domain.trim().toLowerCase();"
+        errorLine2="                         ~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\dns\RequestPacket.java"
+            line="48"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="    recvData = StreamUtil.getDownPacket(String.format(&quot;[No:%d]&quot;, sessionNO), pcBuf,"
+        errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\persistent\Session.java"
+            line="159"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="   mLogTag = String.format(&quot;[as_No:%d]&quot;, mSessionNO) + TAG; // assist"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\persistent\Session.java"
+            line="237"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="   mLogTag = String.format(&quot;[No:%d]&quot;, mSessionNO) + TAG;"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\persistent\Session.java"
+            line="240"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="      String.format(&quot;seq=%d,cmd=%s is invalid&quot;, request.getSeqNo(), request.getData().getCommand()));"
+        errorLine2="      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\persistent\Session.java"
+            line="530"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="  mLogTag = String.format(&quot;[No:%d]&quot;, mSessionNO) + TAG;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\simplechannel\SessionForSimpleChannel.java"
+            line="178"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="      String.format(&quot;seq=%d,cmd=%s is invalid&quot;, request.getSeqNo(), request.getData().getCommand()));"
+        errorLine2="      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\simplechannel\SessionForSimpleChannel.java"
+            line="575"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="    recvData = StreamUtil.getDownPacket(String.format(&quot;[No:%d]&quot;, sessionNO), pcBuf,"
+        errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\persistent\SessionForUploadLog.java"
+            line="103"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="      String.format(&quot;seq=%d,cmd=%s is invalid&quot;, request.getSeqNo(), request.getData().getCommand()));"
+        errorLine2="      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\persistent\SessionForUploadLog.java"
+            line="366"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                            String.format(&quot;handleMessage MSG_TYPE_OPEN_SESSION_FAIL is mMasterSession No:%d, mState = %d&quot;,"
+        errorLine2="                            ^">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\persistent\SessionManager.java"
+            line="513"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                            String.format(&quot;handleMessage MSG_TYPE_OPEN_SESSION_FAIL is isTryingSession No:%d, mState = %d&quot;,"
+        errorLine2="                            ^">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\persistent\SessionManager.java"
+            line="523"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                        String.format(&quot;handleMessage SESSION_ERROR reason = %d, No:%d&quot;, errCode, session.getSessionNO()));"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\persistent\SessionManager.java"
+            line="566"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            MiLinkLog.w(TAG, String.format(&quot;Session No:%d is AbandonSession return &quot;, session.getSessionNO()));"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\persistent\SessionManager.java"
+            line="950"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                MiLinkLog.w(TAG, String.format(&quot;mMasterSession = [Session No:%d] &quot;, mMasterSession.getSessionNO()));"
+        errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\persistent\SessionManager.java"
+            line="1401"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        MiLinkLog.i(TAG, &quot;getNextServerProfile &quot; + String.format(&quot;[Session No:%d] &quot;, session.getSessionNO()));"
+        errorLine2="                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\persistent\SessionManager.java"
+            line="1470"
+            column="52"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="      String.format(&quot;handleMessage MSG_TYPE_OPEN_SESSION_FAIL is mMasterSession No:%d, mState = %d&quot;,"
+        errorLine2="      ^">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\simplechannel\SessionManagerForSimpleChannel.java"
+            line="424"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="      String.format(&quot;handleMessage MSG_TYPE_OPEN_SESSION_FAIL is isTryingSession No:%d, mState = %d&quot;,"
+        errorLine2="      ^">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\simplechannel\SessionManagerForSimpleChannel.java"
+            line="434"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="     String.format(&quot;handleMessage SESSION_ERROR reason = %d, No:%d&quot;, errCode, session.getSessionNO()));"
+        errorLine2="     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\simplechannel\SessionManagerForSimpleChannel.java"
+            line="477"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="   MiLinkLog.w(TAG, String.format(&quot;Session No:%d is AbandonSession return &quot;, session.getSessionNO()));"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\simplechannel\SessionManagerForSimpleChannel.java"
+            line="733"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="    MiLinkLog.w(TAG, String.format(&quot;mMasterSession = [Session No:%d] &quot;, mMasterSession.getSessionNO()));"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\simplechannel\SessionManagerForSimpleChannel.java"
+            line="1105"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="  MiLinkLog.i(TAG, &quot;getNextServerProfile &quot; + String.format(&quot;[Session No:%d] &quot;, session.getSessionNO()));"
+        errorLine2="                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\simplechannel\SessionManagerForSimpleChannel.java"
+            line="1180"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="  return String.format(&quot;[%s : %d / %d]&quot;, (rootPath == null ? &quot;NULL&quot;"
+        errorLine2="         ^">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\info\StorageInfo.java"
+            line="84"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="  return qua.toString().toLowerCase();"
+        errorLine2="                        ~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\common\StreamUtil.java"
+            line="110"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        severity="Warning"
+        message="Not targeting the latest versions of Android; compatibility &#xA;modes apply. Consider testing and updating this version. &#xA;Consult the android.os.Build.VERSION_CODES javadoc for details."
+        category="Correctness"
+        priority="6"
+        summary="Target SDK attribute is not targeting latest version"
+        explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.&#xA;&#xA;To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        url="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        urls="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        errorLine1="        targetSdkVersion 26"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\build.gradle"
+            line="8"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="PrivateApi"
+        severity="Warning"
+        message="Accessing internal APIs via reflection is not supported and may not work on all devices or in the future"
+        category="Correctness"
+        priority="6"
+        summary="Using Private APIs"
+        explanation="Using reflection to access hidden/private Android APIs is not safe; it will often not work on \&#xA;devices from other vendors, and it may suddenly stop working (if the API is removed) or crash \&#xA;spectacularly (if the API behavior changes, since there are no guarantees for compatibility)."
+        errorLine1="    Class onwClass = Class.forName(&quot;android.os.SystemProperties&quot;);"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\info\DeviceDash.java"
+            line="121"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="SimpleDateFormat"
+        severity="Warning"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates."
+        category="Correctness"
+        priority="6"
+        summary="Implied locale in date format"
+        explanation="Almost all callers should use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()` to get a ready-made instance of SimpleDateFormat suitable for the user&apos;s locale. The main reason you&apos;d create an instance this class directly is because you need to format/parse a specific machine-readable format, in which case you almost certainly want to explicitly ask for US to ensure that you get ASCII digits (rather than, say, Arabic digits).&#xA;&#xA;Therefore, you should either use the form of the SimpleDateFormat constructor where you pass in an explicit locale, such as Locale.US, or use one of the get instance methods, or suppress this error if really know what you are doing."
+        url="http://developer.android.com/reference/java/text/SimpleDateFormat.html"
+        urls="http://developer.android.com/reference/java/text/SimpleDateFormat.html"
+        errorLine1="        return new SimpleDateFormat(pattern);"
+        errorLine2="               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\util\CommonUtils.java"
+            line="50"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.support.test:runner than 1.0.1 is available: 1.0.2"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    androidTestImplementation &apos;com.android.support.test:runner:1.0.1&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\build.gradle"
+            line="36"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.support.test.espresso:espresso-core than 3.0.1 is available: 3.0.2"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    androidTestImplementation &apos;com.android.support.test.espresso:espresso-core:3.0.1&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\build.gradle"
+            line="37"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="HardwareIds"
+        severity="Warning"
+        message="Using `getMacAddress` to get device identifiers is not recommended."
+        category="Security"
+        priority="6"
+        summary="Hardware Id Usage"
+        explanation="Using these device identifiers is not recommended other than for high value fraud prevention and advanced telephony use-cases. For advertising use-cases, use `AdvertisingIdClient$Info#getId` and for analytics, use `InstanceId#getId`."
+        url="https://developer.android.com/training/articles/user-data-ids.html"
+        urls="https://developer.android.com/training/articles/user-data-ids.html"
+        errorLine1="   macAddress = wifi.getConnectionInfo().getMacAddress();"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\info\DeviceDash.java"
+            line="60"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardwareIds"
+        severity="Warning"
+        message="Using `getDeviceId` to get device identifiers is not recommended."
+        category="Security"
+        priority="6"
+        summary="Hardware Id Usage"
+        explanation="Using these device identifiers is not recommended other than for high value fraud prevention and advanced telephony use-cases. For advertising use-cases, use `AdvertisingIdClient$Info#getId` and for analytics, use `InstanceId#getId`."
+        url="https://developer.android.com/training/articles/user-data-ids.html"
+        urls="https://developer.android.com/training/articles/user-data-ids.html"
+        errorLine1="    device_id = mTelephonyMgr.getDeviceId();"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\info\DeviceDash.java"
+            line="80"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardwareIds"
+        severity="Warning"
+        message="Using `getString` to get device identifiers is not recommended."
+        category="Security"
+        priority="6"
+        summary="Hardware Id Usage"
+        explanation="Using these device identifiers is not recommended other than for high value fraud prevention and advanced telephony use-cases. For advertising use-cases, use `AdvertisingIdClient$Info#getId` and for analytics, use `InstanceId#getId`."
+        url="https://developer.android.com/training/articles/user-data-ids.html"
+        urls="https://developer.android.com/training/articles/user-data-ids.html"
+        errorLine1="     device_id = Settings.Secure.getString(Global.getApplicationContext().getContentResolver(),"
+        errorLine2="                 ^">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\info\DeviceDash.java"
+            line="83"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="HardwareIds"
+        severity="Warning"
+        message="Using `getDeviceId` to get device identifiers is not recommended."
+        category="Security"
+        priority="6"
+        summary="Hardware Id Usage"
+        explanation="Using these device identifiers is not recommended other than for high value fraud prevention and advanced telephony use-cases. For advertising use-cases, use `AdvertisingIdClient$Info#getId` and for analytics, use `InstanceId#getId`."
+        url="https://developer.android.com/training/articles/user-data-ids.html"
+        urls="https://developer.android.com/training/articles/user-data-ids.html"
+        errorLine1="    mDeviceId = mTelephonyMgr.getDeviceId();"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\info\DeviceDash.java"
+            line="175"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnsafeDynamicallyLoadedCode"
+        severity="Warning"
+        message="Dynamically loading code using `load` is risky, please use `loadLibrary` instead when possible"
+        category="Security"
+        priority="4"
+        summary="`load` used to dynamically load code"
+        explanation="Dynamically loading code from locations other than the application&apos;s library directory or the Android platform&apos;s built-in library directories is dangerous, as there is an increased risk that the code could have been tampered with. Applications should use `loadLibrary` when possible, which provides increased assurance that libraries are loaded from one of these safer locations. Application developers should use the features of their development environment to place application native libraries into the lib directory of their compiled APKs."
+        errorLine1="    System.load(soFilePath);"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\Native.java"
+            line="114"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnsafeDynamicallyLoadedCode"
+        severity="Warning"
+        message="Dynamically loading code using `load` is risky, please use `loadLibrary` instead when possible"
+        category="Security"
+        priority="4"
+        summary="`load` used to dynamically load code"
+        explanation="Dynamically loading code from locations other than the application&apos;s library directory or the Android platform&apos;s built-in library directories is dangerous, as there is an increased risk that the code could have been tampered with. Applications should use `loadLibrary` when possible, which provides increased assurance that libraries are loaded from one of these safer locations. Application developers should use the features of their development environment to place application native libraries into the lib directory of their compiled APKs."
+        errorLine1="   System.load(soFilePath);"
+        errorLine2="   ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\Native.java"
+            line="182"
+            column="4"/>
+    </issue>
+
+    <issue
+        id="WakelockTimeout"
+        severity="Warning"
+        message="Provide a timeout when requesting a wakelock with `PowerManager.Wakelock.acquire(long timeout)`. This will ensure the OS will cleanup any wakelocks that last longer than you intend, and will save your user&apos;s battery."
+        category="Performance"
+        priority="9"
+        summary="Using wakeLock without timeout"
+        explanation="Wakelocks have two acquire methods: one with a timeout, and one without. You should generally always use the one with a timeout. A typical timeout is 10 minutes. If the task takes longer than it is critical that it happens (i.e. can&apos;t use `JobScheduler`) then maybe they should consider a foreground service instead (which is a stronger run guarantee and lets the user know something long/important is happening)."
+        errorLine1="                    mWakeLock.acquire();"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\mipush\MiPushManager.java"
+            line="266"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="WakelockTimeout"
+        severity="Warning"
+        message="Provide a timeout when requesting a wakelock with `PowerManager.Wakelock.acquire(long timeout)`. This will ensure the OS will cleanup any wakelocks that last longer than you intend, and will save your user&apos;s battery."
+        category="Performance"
+        priority="9"
+        summary="Using wakeLock without timeout"
+        explanation="Wakelocks have two acquire methods: one with a timeout, and one without. You should generally always use the one with a timeout. A typical timeout is 10 minutes. If the task takes longer than it is critical that it happens (i.e. can&apos;t use `JobScheduler`) then maybe they should consider a foreground service instead (which is a stronger run guarantee and lets the user know something long/important is happening)."
+        errorLine1="                        mWakeLock.acquire();"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\persistent\SessionManager.java"
+            line="1742"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="WakelockTimeout"
+        severity="Warning"
+        message="Provide a timeout when requesting a wakelock with `PowerManager.Wakelock.acquire(long timeout)`. This will ensure the OS will cleanup any wakelocks that last longer than you intend, and will save your user&apos;s battery."
+        category="Performance"
+        priority="9"
+        summary="Using wakeLock without timeout"
+        explanation="Wakelocks have two acquire methods: one with a timeout, and one without. You should generally always use the one with a timeout. A typical timeout is 10 minutes. If the task takes longer than it is critical that it happens (i.e. can&apos;t use `JobScheduler`) then maybe they should consider a foreground service instead (which is a stronger run guarantee and lets the user know something long/important is happening)."
+        errorLine1="      mWakeLock.acquire();"
+        errorLine2="      ~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\session\simplechannel\SessionManagerForSimpleChannel.java"
+            line="1417"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 16"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\config\ConfigManager.java"
+            line="331"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 16"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="        if (Build.VERSION.SDK_INT > 14) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\service\MiLinkService.java"
+            line="96"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 16"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1=" private final boolean cellListenEnabled = (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.ECLAIR_MR1);"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\os\info\NetworkObserver.java"
+            line="29"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is never &lt; 16"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="                if (Build.VERSION.SDK_INT &lt;= 15) {"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\util\PreloadClearUtil.java"
+            line="108"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="Do not place Android context classes in static fields; this is a memory leak (and also breaks Instant Run)"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts.&#xA;&#xA;Non-static inner classes have an implicit reference to their outer class. If that outer class is for example a `Fragment` or `Activity`, then this reference means that the long-running handler/loader/task will hold a reference to the activity which prevents it from getting garbage collected.&#xA;&#xA;Similarly, direct field references to activities and fragments from these longer running instances can cause leaks.&#xA;&#xA;ViewModel classes should never point to Views or non-application Contexts."
+        errorLine1="    private static Context context;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\base\Global.java"
+            line="72"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="Do not place Android context classes in static fields (static reference to `MiLinkClientIpc` which has field `context` pointing to `Context`); this is a memory leak (and also breaks Instant Run)"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts.&#xA;&#xA;Non-static inner classes have an implicit reference to their outer class. If that outer class is for example a `Fragment` or `Activity`, then this reference means that the long-running handler/loader/task will hold a reference to the activity which prevents it from getting garbage collected.&#xA;&#xA;Similarly, direct field references to activities and fragments from these longer running instances can cause leaks.&#xA;&#xA;ViewModel classes should never point to Views or non-application Contexts."
+        errorLine1="    private static MiLinkClientIpc INSTANCE;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\client\ipc\MiLinkClientIpc.java"
+            line="40"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="This AsyncTask class should be static or leaks might occur (anonymous android.os.AsyncTask)"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts.&#xA;&#xA;Non-static inner classes have an implicit reference to their outer class. If that outer class is for example a `Fragment` or `Activity`, then this reference means that the long-running handler/loader/task will hold a reference to the activity which prevents it from getting garbage collected.&#xA;&#xA;Similarly, direct field references to activities and fragments from these longer running instances can cause leaks.&#xA;&#xA;ViewModel classes should never point to Views or non-application Contexts."
+        errorLine1="            new AsyncTask&lt;Void, Void, Void>() {"
+        errorLine2="            ^">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\client\ipc\internal\MnsSendPacketListener.java"
+            line="47"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="This AsyncTask class should be static or leaks might occur (anonymous android.os.AsyncTask)"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts.&#xA;&#xA;Non-static inner classes have an implicit reference to their outer class. If that outer class is for example a `Fragment` or `Activity`, then this reference means that the long-running handler/loader/task will hold a reference to the activity which prevents it from getting garbage collected.&#xA;&#xA;Similarly, direct field references to activities and fragments from these longer running instances can cause leaks.&#xA;&#xA;ViewModel classes should never point to Views or non-application Contexts."
+        errorLine1="            new AsyncTask&lt;Void, Void, Void>() {"
+        errorLine2="            ^">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\java\com\mi\milink\sdk\client\ipc\internal\MnsSendPacketListener.java"
+            line="61"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.app_name` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;app_name&quot;>SdkLibrary&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\yeejay\mixchat\MiLinkSdkCoreAS\sdklibrary\src\main\res\values\strings.xml"
+            line="2"
+            column="13"/>
+    </issue>
+
+</issues>

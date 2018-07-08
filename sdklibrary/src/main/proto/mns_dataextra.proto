@@ -1,0 +1,39 @@
+
+/*****************    pb规范   *******************************************
+1.用pascal规则(每个单词首字段都用大写)命名message消息类型
+2.用camel规则(第一个字母小写，余下单词首字母大写)命名字段名
+3.全大写命名extend消息类型的字段名
+4.string统一采用utf8编码
+5.除unixtime、32位网络IP用fixed32外，其余无符号都用uint32，有符号用sint32
+6.result用无符号:0代表成功，错误码全局分段管理,高24位用于分段，低8位为具体错误
+*************************************************************************/
+
+package com.mi.milink.sdk.proto;
+
+option java_package = "com.mi.milink.sdk.proto";
+option java_outer_classname = "DataExtraProto";
+
+
+// 这是一个客户端内部的pb结构，不会在网络上传输
+// 为了方便把sdk的数据透传给app，所以定义了此pb结构
+// 使用一个特殊的cmd=data.extra标示
+message DataExtra
+{
+	optional float  engineratio=1;//引擎配置比例,vidyo必须为分母
+        optional string engineConfigJson=5; 
+}
+message DataClientIp
+{
+	optional string clientIp = 1;
+	optional string clientIpIsp = 2;
+}
+
+message DataAnonymousWid
+{
+	optional uint64 wid = 1;
+}
+message DataLoglevel
+{
+   optional uint32 loglevel=1;// 日志级别
+   optional uint32 timeLong = 2;//时长
+}

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\yeejay\\mixchat\\MiLinkSdkCoreAS\\sdklibrary\\build\\intermediates\\res\\merged\\release\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\30849\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\17b92f7f585af7c52219426879019598\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "C:\\yeejay\\mixchat\\MiLinkSdkCoreAS\\sdklibrary\\build\\intermediates\\res\\merged\\release\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\30849\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\38626c42b640aeec3c07d037b2a5ee60\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "C:\\yeejay\\mixchat\\MiLinkSdkCoreAS\\sdklibrary\\build\\intermediates\\res\\merged\\release\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\30849\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\17b92f7f585af7c52219426879019598\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\yeejay\\mixchat\\MiLinkSdkCoreAS\\sdklibrary\\build\\intermediates\\res\\merged\\release\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\30849\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\17b92f7f585af7c52219426879019598\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    }
+]
