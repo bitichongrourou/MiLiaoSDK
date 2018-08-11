@@ -11,6 +11,7 @@ import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Process;
 import android.os.SystemClock;
 import android.provider.AlarmClock;
@@ -87,7 +88,13 @@ public class AlarmReceiver extends BroadcastReceiver {
                         serviceIntent.putExtra(Const.Extra.OnStartCommandReturn, 1);
                         serviceIntent
                                 .setComponent(new ComponentName(context, Const.IPC.ServiceName));
-                        context.startService(serviceIntent);
+
+                        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+                            //android 8.0后必须启动前台Service
+                            context.startForegroundService(serviceIntent);
+                        }else {
+                            context.startService(serviceIntent);
+                        }
                     }
                     EventBus.getDefault().post(
                             new SystemNotificationEvent(

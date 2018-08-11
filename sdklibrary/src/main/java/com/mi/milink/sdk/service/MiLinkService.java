@@ -3,6 +3,7 @@ package com.mi.milink.sdk.service;
 
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
+import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
@@ -79,6 +80,11 @@ public class MiLinkService extends Service {
         // 启动时钟
         AlarmClockService.start();
         long end = System.currentTimeMillis();
+
+        //android 8.0后必须启动前台Service
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            startForeground(833991 , new Notification());
+        }
 
         MiLinkLog.w(TAG, "MiLink Service Created, pid=" + android.os.Process.myPid() + ", cost="
                 + (end - begin));
